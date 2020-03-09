@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>ARBot</title>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.2/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
-<a-scene stats embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
+<a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
+    <!--<a-marker type=‘pattern’ url=‘marker.patt’>-->
     <a-marker preset="hiro">
-        <a-entity>
-            <!--<a-animation attribute="rotation"-->
-            <!--dur="2000"-->
-            <!--easing="linear"-->
-            <!--from="0 0 0"-->
-            <!--to="0 360 0"-->
-            <!--repeat="indefinite"></a-animation>-->
-            <a-entity position="0 0.5 0"
-                      animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear;"
-                      obj-model="obj: url(/assets/Test.obj); mtl: url(/assets/Test.mtl)"></a-entity>
+        <!--<a-entity position="0 0.7 0" scale="1.5 1.5 1.5"-->
+                  <!--animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear;"-->
+                  <!--gltf-model="url(/assets/Test.gltf)">-->
+        <!--</a-entity>-->
+        <a-entity position="0 0.8 0" scale="1.5 1.5 1.5" gltf-model="url(/assets/Test.gltf)">
         </a-entity>
     </a-marker>
     <a-entity camera>
